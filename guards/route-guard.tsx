@@ -45,7 +45,7 @@ function RouteGuard({ children }) {
         if (shouldRedirect && !publicPaths.includes(path)) {
             setAuthorized(false);
             router.push({
-                pathname: '/admin',
+                pathname: '/admin/index.tsx',
                 query: { returnUrl: router.asPath }
             });
         } else {
